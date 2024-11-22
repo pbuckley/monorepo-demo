@@ -10,4 +10,10 @@ steps:
             - path: safe/
               config:
                 command: ".buildkite/scripts/dynamic_pipeline.sh safe"
+            - path: tall/
+              config:
+                command: ".buildkite/scripts/dynamic_pipeline.sh tall"
+            - path: trigger/
+              config:
+                command: ".buildkite/scripts/dynamic_pipeline.sh trigger"
 queue: "q1"
