@@ -25,7 +25,7 @@ steps:
       - "tests"
     key: "dev_block"
   - group: ":rocket: :aws: Parallel Dev Deploys"
-    key: "dev_deploys"
+    key: "devvy_deploys"
     steps:
     - label: ":ec2: dev_sm_x86_us-east-1"
       command: "echo Deploying to Intel us-east-1"
@@ -50,7 +50,7 @@ steps:
       - "stg_block"
   - block: ":question: Deploy to Prod?"
     depends_on:
-      - "dev_deploys"
+      - "devvy_deploys"
       - "stg_deploys"
     key: "prod_block"
   - block: ":warning: :question: ARE YOU SURE? Deploy to Prod? :warning:"

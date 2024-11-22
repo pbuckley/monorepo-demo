@@ -14,6 +14,10 @@ steps:
       command: "echo Deploying to Intel us-central-1"
     - label: ":ec2: dev_med_arm_us-central-1"
       command: "echo Deploying to ARM us-central-1"
+    - label: ":ec2: dev_sm_x86_eu-central-1"
+      command: "echo Deploying to Intel eu-central-1"
+    - label: ":ec2: dev_med_arm_eu-central-1"
+      command: "echo Deploying to ARM eu-central-1"
   - group: ":rocket: :aws: Parallel Staging Deploys"
     key: "stg_deploys"
     steps:
@@ -29,6 +33,12 @@ steps:
       command: "echo Deploying to Intel us-central-1"
     - label: ":ec2: stg_med_arm_us-central-1"
       command: "echo Deploying to ARM us-central-1"
+    - label: ":ec2: stg_sm_x86_eu-central-1"
+      command: "echo Deploying to Intel eu-central-1"
+    - label: ":ec2: stg_med_arm_eu-central-1"
+      command: "echo Deploying to ARM eu-central-1"
+    depends_on:
+      - "dev_deploys"
   - group: ":rocket: :aws: Parallel QA Deploys"
     key: "qa_deploys"
     steps:
@@ -44,6 +54,10 @@ steps:
       command: "echo Deploying to Intel us-central-1"
     - label: ":ec2: qa_med_arm_us-central-1"
       command: "echo Deploying to ARM us-central-1"
+    - label: ":ec2: qa_sm_x86_eu-central-1"
+      command: "echo Deploying to Intel eu-central-1"
+    - label: ":ec2: qa_med_arm_eu-central-1"
+      command: "echo Deploying to ARM eu-central-1"
   - group: ":rocket: :aws: Parallel Pre-Prod Deploys"
     key: "pre_deploys"
     steps:
@@ -59,4 +73,10 @@ steps:
       command: "echo Deploying to Intel us-central-1"
     - label: ":ec2: pre_med_arm_us-central-1"
       command: "echo Deploying to ARM us-central-1"
+    - label: ":ec2: pre_sm_x86_eu-central-1"
+      command: "echo Deploying to Intel eu-central-1"
+    - label: ":ec2: pre_med_arm_eu-central-1"
+      command: "echo Deploying to ARM eu-central-1"
+    depends_on:
+      - "qa_deploys"
 queue: "q1"
