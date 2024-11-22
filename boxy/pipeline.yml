@@ -80,4 +80,4 @@ steps:
     depends_on:
       - "qa_deploys"
 agents:
-  queue: "k8sdefault"
+  queue: "q1"

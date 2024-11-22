@@ -67,4 +67,4 @@ steps:
     depends_on:
       - "sure_block"
 agents:
-  queue: "k8sdefault"
+  queue: "q1"

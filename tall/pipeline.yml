@@ -60,4 +60,4 @@ steps:
   - label: ":bazel: bb-cluster-5"
     command: "echo Remote execution to bb-cluster-5"
 agents:
-  queue: "k8sdefault"
+  queue: "q1"

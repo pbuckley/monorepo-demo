@@ -4,4 +4,4 @@ steps:
   - label: "Trigger separate pipeline"
     trigger: pipeline-that-gets-triggered
 agents:
-  queue: "k8sdefault"
+  queue: "q1"
