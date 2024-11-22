@@ -11,7 +11,7 @@ steps:
       command: "echo Running Tests in parallel"
     - label: ":coverage: Check codecov"
       command: "echo Gathering code coverage numbers"
-  - group: ":lock_with_ink_pen: Security Checks"
+  - group: ":lock_with_ink_pen: Security Checks Are Good Practice"
     key: "audits"
     steps:
     - label: ":nsp: :male-detective: Security Scan"
