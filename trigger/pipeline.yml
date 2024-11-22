@@ -3,4 +3,4 @@ steps:
     command: "echo Building"
   - label: "Trigger separate pipeline"
     trigger: pipeline-that-gets-triggered
-queue: "q1"
+queue: "k8sdefault"

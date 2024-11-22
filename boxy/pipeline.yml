@@ -79,4 +79,4 @@ steps:
       command: "echo Deploying to ARM eu-central-1"
     depends_on:
       - "qa_deploys"
-queue: "q1"
+queue: "k8sdefault"

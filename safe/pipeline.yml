@@ -66,4 +66,4 @@ steps:
       command: "echo Deploying to ARM us-east-1"
     depends_on:
       - "sure_block"
-queue: "q1"
+queue: "k8sdefault"
