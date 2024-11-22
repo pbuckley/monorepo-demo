@@ -2,5 +2,5 @@ steps:
   - label: ":building_construction: Build that code then trigger another :pipeline:"
     command: "echo Building"
   - label: "Trigger separate pipeline"
-    trigger: demo-inputs
+    trigger: pipeline-that-gets-triggered
 queue: "q1"
