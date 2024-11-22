@@ -59,4 +59,5 @@ steps:
     command: "echo Remote execution to bb-cluster-1"
   - label: ":bazel: bb-cluster-5"
     command: "echo Remote execution to bb-cluster-5"
-queue: "k8sdefault"
+agents:
+  queue: "k8sdefault"
