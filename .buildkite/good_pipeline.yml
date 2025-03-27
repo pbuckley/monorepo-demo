@@ -1,0 +1,19 @@
+steps:
+  - label: "Building monorepo"
+    plugins:
+      - monorepo-diff#v1.2.0:
+          diff: "git diff --name-only HEAD~1"
+          watch:
+            - path: boxy/
+              config:
+                command: ".buildkite/scripts/dynamic_pipeline.sh boxy"
+            - path: safe/
+              config:
+                command: ".buildkite/scripts/dynamic_pipeline.sh safe"
+            - path: tall/
+              config:
+                command: ".buildkite/scripts/dynamic_pipeline.sh tall"
+            - path: trigger/
+              config:
+                command: ".buildkite/scripts/dynamic_pipeline.sh trigger"
+queue: "mccue"
