@@ -27,4 +27,4 @@ done)
 ✅ **Build completed successfully**
 EOF
 
-printf '%b\n' "$(cat build-success.md" | buildkite-agent annotate --style "success" --context "built-artifact"
+printf '%b\n' "$(cat build-success.md)" | buildkite-agent annotate --style "success" --context "built-artifact"
