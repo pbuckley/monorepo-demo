@@ -14,9 +14,9 @@ cat > "build-success.md" <<EOF
 
 ## Build Information
 
-** Application:** \`${BUILDKITE_PIPELINE_NAME}\`
-** Version:** \`${REL_VER}\`
-** Build number:** \`${BUILDKITE_BUILD_NUMBER}\`
+**Application:** \`${BUILDKITE_PIPELINE_NAME}\`
+**Version:** \`${REL_VER}\`
+**Build number:** \`${BUILDKITE_BUILD_NUMBER}\`
 
 ## Deployment Targets
 
@@ -24,6 +24,9 @@ The application can be deployed to the following targets:
 $(for host in "${DEPLOY_HOST_ARRAY[@]}"; do
     echo "- \`${host}\`"
 done)
+
+---
+
 ✅ **Build completed successfully**
 EOF
 
