@@ -1,18 +1,18 @@
 steps:
   - label: "Building monorepo"
     plugins:
-      - monorepo-diff#v1.2.0:
+      - monorepo-diff#v1.4.0:
           diff: "git diff --name-only HEAD~1"
           watch:
-            - path: boxy/
+            - path: "**/*"
               config:
-                command: ".buildkite/scripts/dynamic_pipeline.sh boxy"
+                trigger: "service-web"
             - path: safe/
               config:
-                command: ".buildkite/scripts/dynamic_pipeline.sh safe"
+                trigger: "app-foo"
             - path: tall/
               config:
-                command: ".buildkite/scripts/dynamic_pipeline.sh tall"
+                trigger: "service-bar"
             - path: trigger/
               config:
                 command: ".buildkite/scripts/dynamic_pipeline.sh trigger"
